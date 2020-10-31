@@ -1,10 +1,13 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
     {% for post in posts %}
-        <h1>{{post.title}}</h1>
-        <h6>by {{post.author}}, {{post.date_posted}}</h6>
-        <p>{{post.content}}</p>
-        <hr/>
+
+        <div class="card p-3 mb-2">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">by {{post.author}}, {{post.date_posted}}</h6>
+              <p class="card-text">{{post.content}}</p>
+            </div>
+          </div>
     {% endfor %}
 {% endblock content %}
