@@ -6,6 +6,11 @@
     <title>Blog Home</title>
 </head>
 <body>
-    
+    {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <h6>by {{post.author}}, {{post.date_posted}}</h6>
+        <p>{{post.content}}</p>
+    {% endfor %}
+
 </body>
 </html>
